@@ -124,7 +124,7 @@ with col1:
     if uploaded_file is not None:
         # Display the uploaded image
         image = Image.open(uploaded_file)
-        st.image(image, caption="Uploaded Image", use_column_width=True)
+        st.image(image, caption="Uploaded Image", use_container_width=True)
         
         # Convert to base64
         base64_string = encode_image_to_base64(image)
@@ -166,7 +166,7 @@ with col2:
                 # Create a copy of the image to avoid display issues
                 display_image = decoded_image.copy()
                 
-                st.image(display_image, caption="Decoded Image", use_column_width=True)
+                st.image(display_image, caption="Decoded Image", use_container_width=True)
                 
                 # Convert image to bytes for download
                 img_buffer = io.BytesIO()
